@@ -1,0 +1,1494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:lho="http://www.purl.org/decide/LiveStockHealthOnto/LHO#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS42">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://opendata.inra.fr/AnimalDiseasesOnto/AG509"/>
+    <rdfs:comment>an individual (entity) that represent Infectious Bronchis pathogen</rdfs:comment>
+    <rdfs:label xml:lang="en">IB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS08">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#DiagnosticTest"/>
+    <rdfs:label xml:lang="en">Culture</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_2214740_1">
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:label xml:lang="en">House_2214740_1</rdfs:label>
+    <lho:CS45 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS45>
+    <rdfs:comment xml:lang="en">House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). </rdfs:comment>
+    <lho:CS30 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_279597"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_38543">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS62"/>
+    <rdfs:comment xml:lang="en">This is a Poultry Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">PF_ID_38543</rdfs:label>
+    <lho:CS29 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_6369989_4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_279597">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>279597</lho:CS32>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">487236</lho:CS33>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-07-20</lho:CS34>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-09</lho:CS35>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALT</lho:CS36>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS16">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#SampleResult"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>A data property that tells whether a sample tested positive (1) or negative (0).</rdfs:comment>
+    <rdfs:label xml:lang="en">result</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#Farm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">A farm is an agricultural or aquacultural establishment where crops are cultivated, terrestrial livestock and/or aquatic species (such as fish or shellfish) are raised for food production or other commercial, research, or conservation purposes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Date"/>
+    <rdfs:comment>animal sample date</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#Sample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment>A base class for Animal Samples</rdfs:comment>
+    <rdfs:comment xml:lang="en">A sample, such as a CattleSample, PigSample, or PoultrySample, refers to a specimen collected from respective animals for diagnostic or research purposes, often involving testing for diseases or analyzing biological parameters.</rdfs:comment>
+    <rdfs:label xml:lang="en">Sample</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS26">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#EventType"/>
+    <rdfs:comment xml:lang="en">Represents disease outbreaks linked to regions, time, and pathogens.</rdfs:comment>
+    <rdfs:label xml:lang="en">DiseaseOutBreak</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS02">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://aims.fao.org/aos/agrovoc/c_16398"/>
+    <rdfs:label xml:lang="en">BRSV</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#breed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>data type that Represents breed like beef, mixed, Veal, suckler</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS29">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Farm"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS62"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:comment xml:lang="en">Links a farm to one or more houses within it.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasHouse</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Beef">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
+    <owl:disjointWith rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Egglaying"/>
+    <rdfs:label xml:lang="en">Beef</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PigProductionStages">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockProductionSatges"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_40981">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS62"/>
+    <rdfs:comment xml:lang="en">This is a Poultry Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">PF_ID_40981</rdfs:label>
+    <lho:CS29 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_2811332_2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Finishing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PigProductionStages"/>
+    <rdfs:subClassOf rdf:nodeID="N12b5b09471b74190bd215510aaae73f0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opendata.inra.fr/AnimalDiseasesOnto/AG744">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <lho:hasExactSynonym xml:lang="en">MH</lho:hasExactSynonym>
+    <rdfs:comment xml:lang="en">Mannheimia haemolytica is a bacterium associated with bovine respiratory disease in cattle, causing pneumonia and respiratory distress.</rdfs:comment>
+    <rdfs:isDefinedBy xml:lang="en">http://opendata.inra.fr/AnimalDiseasesOnto/AG744</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">MannheimiaHaemolytica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LabReference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">Lab reference, often a unique number, is assigned to data related to farm animals for identification and tracking within a laboratory or data system.</rdfs:comment>
+    <rdfs:label xml:lang="en">LabReference</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS09">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">Data type of diagnostic test (PCR, Culture, etc.).</rdfs:comment>
+    <rdfs:label xml:lang="en">testType</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_40458">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS62"/>
+    <rdfs:comment xml:lang="en">This is a Poultry Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">PF_ID_40458</rdfs:label>
+    <lho:CS29 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_946937_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_39044">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS62"/>
+    <rdfs:comment xml:lang="en">This is a Poultry Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">PF_ID_39044</rdfs:label>
+    <lho:CS29 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_2214740_3"/>
+    <lho:CS29 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_2214740_2"/>
+    <lho:CS29 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_2214740_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS41">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PoultrySample"/>
+    <lho:hasCountry rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS44"/>
+    <lho:hasDiagnosticTest rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS07"/>
+    <lho:hasPathogen rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS42"/>
+    <lho:CS16>1</lho:CS16>
+    <lho:CS17>2019-09-10</lho:CS17>
+    <rdfs:label xml:lang="en">PoultrySample101</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_946937_1">
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:label xml:lang="en">House_946937_1</rdfs:label>
+    <lho:CS45 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS45>
+    <rdfs:comment xml:lang="en">House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). </rdfs:comment>
+    <lho:CS30 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_280335"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N004b13cd18a9479cb1a979a14c631455">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS29"/>
+    <rdf:rest rdf:nodeID="N7f93fdf1db9f4e918b70430acc9ad40a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_38615">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS62"/>
+    <rdfs:comment xml:lang="en">This is a Poultry Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">PF_ID_38615</rdfs:label>
+    <lho:CS29 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_1729635_3"/>
+    <lho:CS29 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_1729635_2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_274453">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>274453</lho:CS32>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">487236</lho:CS33>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-21</lho:CS34>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-06-03</lho:CS35>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</lho:CS36>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS44">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25464"/>
+    <rdfs:label xml:lang="en">Netherland</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2f3880b795364b799c6e763ec545c363">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasPathogen"/>
+    <owl:someValuesFrom rdf:resource="http://opendata.inra.fr/AnimalDiseasesOnto/AG78"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmID_1977700">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
+    <lho:CS63 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_39488"/>
+    <rdfs:comment xml:lang="en">This is a general Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">FarmID_1977700</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS63">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS62"/>
+    <rdfs:comment>Object property that links  a unique identifier specific to poultry farms, used for traceability and health monitoring purposes.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasPoultryFarmIdentification</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <lho:hasExactSynonym xml:lang="en">LHO</lho:hasExactSynonym>
+    <rdfs:comment xml:lang="en">The Live Stock Health Ontology (LHO), an extension of the DECIDE ontology following OBO Foundry guidelines, serves as a structured framework for organizing information related to the health and well-being of livestock species, encompassing cattle, poultry, pig, and salmon.
+
+LHO facilitates the integration of domain knowledge and data, offering explicit representations of various aspects. In the development process, insights from domain experts contribute to the creation of a prototype designed for reasoning and planning of data, particularly concerning cattle.
+
+Within LHO, concepts include farms with identifications, samples, geolocation, breed, diagnostic tests, and pathogen identifications. Notably, specific bacteria like Histophilus somni (HS), Mannheimia haemolytica (MH), Pasteurella multocida (PM), Bovine coronavirus (BCV), bacterial mycoplasma, and aerobic culture results for the respiratory tract in cattle are covered.
+
+For pigs, additional details encompass FarmType, age, weight-related information, and pathogen names such as Porcine Reproductive and Respiratory Syndrome (PRRS), Swine Infuenza(SI), and Mycoplasma hyopneumoniae are included. This enhanced representation facilitates a comprehensive understanding of pig health, covering aspects of farm classification, age or weight specifics, and the presence of specific pathogens.
+
+Similarly, for poultry, LHO incorporates FarmType along with specific pathogen names like Infectious Bronchitis (IB), offering a detailed perspective on poultry health, including farm categorization and information on prevalent diseases.</rdfs:comment>
+    <rdfs:label xml:lang="en">LiveStockHealthOntology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#country">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25464"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Data type Country naming type string</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Broiler">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PoultryProductionStages"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment>Count of positive  BRD cases in a country.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasCountryNoOfBRD</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS35">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Date when the flock was removed from the house or farm.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasRemovalDate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_268273">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>268273</lho:CS32>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">164846</lho:CS33>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-12-27</lho:CS34>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-02-06</lho:CS35>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</lho:CS36>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_2752546_1">
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:label xml:lang="en">House_2752546_1</rdfs:label>
+    <lho:CS45 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS45>
+    <rdfs:comment xml:lang="en">House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). </rdfs:comment>
+    <lho:CS30 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_261479"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_1761167_5">
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:label xml:lang="en">House_1761167_5</rdfs:label>
+    <lho:CS45 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</lho:CS45>
+    <rdfs:comment xml:lang="en">House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). </rdfs:comment>
+    <lho:CS30 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_266024"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS30">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <rdfs:comment>Links a house to one or more flocks within it.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasFlock</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#pathogen">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>A data property that discribes  a name of the pathogen in animal sample</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmID_2811332">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
+    <lho:CS63 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_40981"/>
+    <rdfs:comment xml:lang="en">This is a general Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">FarmID_2811332</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasWeightUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Weight"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#WeightUnit"/>
+    <rdfs:comment xml:lang="en">A unit of measurement used to express the weight or mass of an animal, feed, or product. 
+Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Province">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS19"/>
+    <rdfs:comment xml:lang="en">A province is an administrative region or territorial division within a country, typically with its own government and administrative structure.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PigSample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:subClassOf rdf:nodeID="N58f61dae7c4f4071afe392e3657cbfe5"/>
+    <rdfs:subClassOf rdf:nodeID="Na284d72fc51b4bdc888c8b04ec1f9020"/>
+    <rdfs:comment xml:lang="en">PigSample is n number of observations for Pig and piglets</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmID_1729635">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
+    <lho:CS63 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_38615"/>
+    <rdfs:comment xml:lang="en">This is a general Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">FarmID_1729635</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_1729635_2">
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:label xml:lang="en">House_1729635_2</rdfs:label>
+    <lho:CS45 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</lho:CS45>
+    <rdfs:comment xml:lang="en">House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). </rdfs:comment>
+    <lho:CS30 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_273670"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Autopsy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#SampleType"/>
+    <rdfs:comment xml:lang="en">An autopsy sample refers to tissues or specimens collected during a post-mortem examination, conducted to investigate the cause of death or study pathological conditions in animals or humans.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#ProductionCycleTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">ProductionCycleTime refers to the duration of a specific production stage or the entire production process in aquaculture or livestock farming. 
+
+It is used to describe the time span from the beginning to the end of a defined stage (e.g., nursery, finishing) or the complete cycle.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N43d4ed1535074dfb9229d601bd89e453">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasPathogen"/>
+    <owl:someValuesFrom rdf:resource="http://aims.fao.org/aos/agrovoc/c_33359"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS32">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">Unique identifier for a flock.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasFlockID</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N58f61dae7c4f4071afe392e3657cbfe5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasPathogen"/>
+    <owl:someValuesFrom rdf:resource="http://aims.fao.org/aos/agrovoc/c_35380"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS31">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:comment xml:lang="en">Links a flock to its associated poultry sample.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasSample</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS40">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS31 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS41"/>
+    <lho:CS32>261479</lho:CS32>
+    <lho:CS33>4856405</lho:CS33>
+    <lho:CS34>2019-09-05</lho:CS34>
+    <lho:CS35>2019-10-31</lho:CS35>
+    <lho:CS36>ALT</lho:CS36>
+    <lho:CS37>1</lho:CS37>
+    <rdfs:label xml:lang="en">FlockID_261479</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PoultrySample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:subClassOf rdf:nodeID="N5e05f63ebab54a8b9faed96aedc05c5c"/>
+    <rdfs:subClassOf rdf:nodeID="Ndd42817a4a194be3aa2c5471adedd4aa"/>
+    <rdfs:comment xml:lang="en">PoultrySample is "n" number of observation for Poultry data.</rdfs:comment>
+    <rdfs:comment xml:lang="en">PoultrySample is associated with a specific flock, linking pathogen data, diagnostic tests, and geolocation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_261479">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>261479</lho:CS32>
+    <lho:CS33>4856405</lho:CS33>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4856405</lho:CS33>
+    <lho:CS34>2019-09-05</lho:CS34>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-09-05</lho:CS34>
+    <lho:CS35>2019-10-31</lho:CS35>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-10-31</lho:CS35>
+    <lho:CS36>ALT</lho:CS36>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALT</lho:CS36>
+    <lho:CS37>1</lho:CS37>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS06">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
+    <rdfs:label xml:lang="en">Beef</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb8119af880e74cfe9b244027ae86771d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N5989671e29dc4917bd33698b17dcf755"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breeding">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PigProductionStages"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Dairy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS62">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
+    <rdfs:comment>A unique identifier specific to poultry farms, used for traceability and health monitoring purposes.</rdfs:comment>
+    <rdfs:label xml:lang="en">PoultryFarmIdentification</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CattleSample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:subClassOf rdf:nodeID="Nffea50bf63b84d8ebcf545be74c31b4a"/>
+    <rdfs:subClassOf rdf:nodeID="N08947736bda349448c4a3548ee9616c2"/>
+    <rdfs:subClassOf rdf:nodeID="Nfd42c5885fd546ae880768f02ce610b0"/>
+    <rdfs:subClassOf rdf:nodeID="N43d4ed1535074dfb9229d601bd89e453"/>
+    <rdfs:subClassOf rdf:nodeID="N7c94aa5be9764f228db350ae0242468a"/>
+    <rdfs:subClassOf rdf:nodeID="N98e291dfa2854a71a72fdf4c9785b6ea"/>
+    <rdfs:subClassOf rdf:nodeID="N31a48a7f42994be286845e65eb9a4a6a"/>
+    <rdfs:subClassOf rdf:nodeID="N2f3880b795364b799c6e763ec545c363"/>
+    <rdfs:comment xml:lang="en">CattleSamples are the  "n" number of observations  for Cattle</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_6369989_4">
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:label xml:lang="en">House_6369989_4</rdfs:label>
+    <lho:CS45 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</lho:CS45>
+    <rdfs:comment xml:lang="en">House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). </rdfs:comment>
+    <lho:CS30 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_274072"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Processing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PoultryProductionStages"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CattleProductionStages">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockProductionSatges"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS33">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Identifier for the veterinarian responsible for the flock.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasVetID</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmID_2214740">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
+    <lho:CS63 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_39044"/>
+    <rdfs:comment xml:lang="en">This is a general Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">FarmID_2214740</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Weaning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PigProductionStages"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">comment "Represents a housing unit within a farm where a poultry flock is kept.</rdfs:comment>
+    <rdfs:label xml:lang="en">House</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opendata.inra.fr/AnimalDiseasesOnto/AG34">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <lho:hasExactSynonym xml:lang="en">BCV</lho:hasExactSynonym>
+    <rdfs:comment xml:lang="en">Bovine coronavirus primarily causes enteric (intestinal) infections in calves, leading to diarrhea.</rdfs:comment>
+    <rdfs:isDefinedBy>http://opendata.inra.fr/AnimalDiseasesOnto/AG34</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">BovineCoronaVirus</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmID_946937">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
+    <lho:CS63 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_40458"/>
+    <rdfs:comment xml:lang="en">This is a general Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">FarmID_946937</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment>Date</rdfs:comment>
+    <rdfs:label>Date</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#H3N2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://aims.fao.org/aos/agrovoc/c_6214dcad"/>
+    <rdfs:comment xml:lang="en">H1N1 is a subtype of the influenza a virus, and it has been responsible for influenza outbreaks in both humans and pigs. In the context of livestock health ontology or any ontology dealing with diseases, H1N1 would be classified as a pathogen.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://aims.fao.org/aos/agrovoc/c_6214dcad">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <lho:hasExactSynonym xml:lang="en">SI</lho:hasExactSynonym>
+    <rdfs:comment xml:lang="en">Swine Influenza is a respiratory viral infection in pigs, characterized by coughing, sneezing, and fever, with potential transmission to humans.</rdfs:comment>
+    <rdfs:isDefinedBy>https://agrovoc.fao.org/browse/agrovoc/en/page/c_6214dcad</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">SwineInfluenza</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#WeightUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Unit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C25464">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS19"/>
+    <lho:hasExactSynonym xml:lang="en">COUNTRY; Country</lho:hasExactSynonym>
+    <lho:imported_from xml:lang="en">http://purl.obolibrary.org/obo/ncit.owl</lho:imported_from>
+    <rdfs:label xml:lang="en">Country</rdfs:label>
+    <rdfs:seeAlso>https://www.w3.org/2000/01/rdf-schema#</rdfs:seeAlso>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#Event">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment>A class representing any occurrence or activity related to aquaculture or livestock management, such as disease outbreaks, treatments, movements, or inspections.</rdfs:comment>
+    <rdfs:label>Event</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment>Count of BRD cases in a province.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasProvinceNoOfBRD</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_273670">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>273670</lho:CS32>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">487236</lho:CS33>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-07</lho:CS34>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-05-20</lho:CS35>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</lho:CS36>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasLabReference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LabReference"/>
+    <rdfs:comment>Link Lab reference,for identification and tracking within a laboratory or data system if Farm Identification is not available</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasTimeUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Age"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#TimeUnit"/>
+    <rdfs:comment>Linking Animal age with TimeUnit</rdfs:comment>
+    <rdfs:comment>Time unit like Months, days, minutes etc...</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N58de3015b11e4ee1a3637e57843d0357">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasBreed"/>
+    <owl:allValuesFrom rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Beef"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS17">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Date when the sample was collected.</rdfs:comment>
+    <rdfs:label xml:lang="en">date</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_267678">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>267678</lho:CS32>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">164846</lho:CS33>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-12-23</lho:CS34>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-02-20</lho:CS35>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALT</lho:CS36>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb1d4f8f3070a4ac691e01d3b2783b639">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PoultryProductionStages"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Blood">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#SampleType"/>
+    <rdfs:comment xml:lang="en">Blood is a SampleType. A blood sample is a specimen collected from an organism, typically through venipuncture, and is used for diagnostic or research purposes, providing insights into the health and physiological parameters of the individual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_2214740_2">
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:label xml:lang="en">House_2214740_2</rdfs:label>
+    <lho:CS45 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</lho:CS45>
+    <rdfs:comment xml:lang="en">House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). </rdfs:comment>
+    <lho:CS30 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_279259"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#cattle">
+    <rdfs:label></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasWeight">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Weight"/>
+    <rdfs:comment>link animal sample weight</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS24">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS19"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS22"/>
+    <rdfs:comment xml:lang="en">Links a region to BRD case records.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasBRDCase</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#DairyProduct">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CattleProductionStages"/>
+    <rdfs:subClassOf rdf:nodeID="N5e4c232b8b71460db8d9e4854ed7dcf0"/>
+    <owl:disjointWith rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Growing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opendata.inra.fr/AnimalDiseasesOnto/AG509">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <lho:hasExactSynonym xml:lang="en">IB</lho:hasExactSynonym>
+    <rdfs:comment xml:lang="en">Infectious bronchitis is a highly contagious viral respiratory disease in chickens, characterized by respiratory distress and egg production drops.</rdfs:comment>
+    <rdfs:isDefinedBy>http://opendata.inra.fr/AnimalDiseasesOnto/AG509</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">InfectiousBrochist</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_2811332_2">
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:label xml:lang="en">House_2811332_2</rdfs:label>
+    <lho:CS45 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</lho:CS45>
+    <rdfs:comment xml:lang="en">House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). </rdfs:comment>
+    <lho:CS30 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_268273"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncd8f2b3768d041f7af79ddc72dd42eee">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Nursery"/>
+    <rdf:rest rdf:nodeID="N5a83d38ed6a044759d7c4ec3a51adcff"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasFarmType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmType"/>
+    <rdfs:comment>link sample to the farm type</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#VacinationEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#EventType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_1646742_6">
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:label xml:lang="en">House_1646742_6</rdfs:label>
+    <lho:CS45 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</lho:CS45>
+    <rdfs:comment xml:lang="en">House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). </rdfs:comment>
+    <lho:CS30 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_261895"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#equivalentClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasFarmIdentification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="Nb8119af880e74cfe9b244027ae86771d"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
+    <rdfs:comment>Links a sample or a farm to unique farm ID</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS20">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Unit"/>
+    <rdfs:label xml:lang="en">Quarter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#SpeciesGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
+    <rdfs:comment>SpeciesGroup represents a group of animals belonging to the same species or production category 
+    (e.g., Atlantic salmon, broiler chickens, weaned piglets, dairy cattle). 
+    It is used to describe the target population involved in events such as sampling, treatment, or observation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_38423">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS62"/>
+    <rdfs:comment xml:lang="en">This is a Poultry Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">PF_ID_38423</rdfs:label>
+    <lho:CS29 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_1646742_6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mixed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#SampleType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Tissue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#SampleType"/>
+    <rdfs:comment xml:lang="en">A tissue sample is a specimen composed of cells derived from an organism's body, collected for diagnostic or research purposes to study cellular structures, functions, or identify potential abnormalities.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#SampleResult">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">SampleResult represents the outcome or findings derived from analyzing a specimen, providing valuable information about the health or characteristics of the sampled subject, whether it be cattle, pig, poultry, or another source.</rdfs:comment>
+    <rdfs:label>SampleResult</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasSampleResult">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide#SampleResult"/>
+    <rdfs:comment>Link Sample to result postive 1 or negative 0</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">Represents the number of BRD cases in a region/time.</rdfs:comment>
+    <rdfs:label xml:lang="en">BRDCasesObservation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://aims.fao.org/aos/agrovoc/c_6145">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
+    <rdfs:label xml:lang="en">Poultry</rdfs:label>
+    <skos:PrefLable>poultry</skos:PrefLable>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasDiagnosticTest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#DiagnosticTest"/>
+    <rdfs:comment>Links a sample to a test performed.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9dd717ac81bf4863986c61d036522ca9">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breeder"/>
+    <rdf:rest rdf:nodeID="Nbad5f7806b814e869b1107a1a7d925a2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://aims.fao.org/aos/agrovoc/c_27245">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <lho:hasExactSynonym>M.Hyopneumoniae</lho:hasExactSynonym>
+    <lho:hasExactSynonym xml:lang="en">M_Hyopneumoniae</lho:hasExactSynonym>
+    <rdfs:comment xml:lang="en">Mycoplasma hyopneumoniae is a bacterium causing swine enzootic pneumonia, a respiratory disease in pigs, characterized by coughing and impaired respiratory function.</rdfs:comment>
+    <rdfs:label xml:lang="en">MycoplasmaHyopneumoniae</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nffea50bf63b84d8ebcf545be74c31b4a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasPathogen"/>
+    <owl:someValuesFrom rdf:resource="http://aims.fao.org/aos/agrovoc/c_16398"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7c94aa5be9764f228db350ae0242468a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasPathogen"/>
+    <owl:someValuesFrom rdf:resource="http://aims.fao.org/aos/agrovoc/c_34495"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_39488">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS62"/>
+    <rdfs:comment xml:lang="en">This is a Poultry Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">PF_ID_39488</rdfs:label>
+    <lho:CS29 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_1977700_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_266024">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>266024</lho:CS32>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">164846</lho:CS33>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-11-22</lho:CS34>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-01-15</lho:CS35>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALT</lho:CS36>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasSampleNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#SampleNumber"/>
+    <rdfs:comment>link sample to its unique sample Number if available</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS04">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide#SampleResult"/>
+    <rdfs:label xml:lang="en">0</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_280335">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>280335</lho:CS32>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">487236</lho:CS33>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-07-31</lho:CS34>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-09-10</lho:CS35>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</lho:CS36>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Swab">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#SampleType"/>
+    <rdfs:comment xml:lang="en">A swab is a sample collection method involving a small absorbent tool, often a cotton-tipped applicator, used to collect specimens from surfaces or body areas, such as the throat or nasal cavity, for diagnostic or research purposes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5e05f63ebab54a8b9faed96aedc05c5c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS30"/>
+    <owl:someValuesFrom rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Suckling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PigProductionStages"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_279259">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>279259</lho:CS32>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">487236</lho:CS33>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-07-14</lho:CS34>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-08-26</lho:CS35>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</lho:CS36>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndd42817a4a194be3aa2c5471adedd4aa">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasPathogen"/>
+    <owl:someValuesFrom rdf:resource="http://opendata.inra.fr/AnimalDiseasesOnto/AG509"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasEventType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide#EventType"/>
+    <rdfs:comment>link sample to event at which it perform</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS43">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockProductionSatges"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide#ProductionCycleTime"/>
+    <rdfs:comment>Links a production stage to a concept representing the time duration of that stage.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasCycleTime</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS37">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">A data property that indicates whether the flock has undergone thinning (removal of some birds before full harvest).</rdfs:comment>
+    <rdfs:label xml:lang="en">hasThinned</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS01">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CattleSample"/>
+    <lho:hasBreed rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS06"/>
+    <lho:hasDiagnosticTest rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS07"/>
+    <lho:hasPathogen rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS02"/>
+    <lho:hasSampleResult rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS04"/>
+    <rdfs:label xml:lang="en">CattleSample01</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25464"/>
+    <rdfs:comment>Sample belong to which country</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS25">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS19"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS26"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS20"/>
+    <rdfs:comment>Links a region to a specific time period.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasTimePeriod</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS15">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment>Count of BRD cases in Quarter</rdfs:comment>
+    <rdfs:label xml:lang="en">hasQuarterNoOfBRD</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS38">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:propertyChainAxiom rdf:nodeID="N40cdcad20d164fdd8e00f9d6f9442307"/>
+    <rdfs:label xml:lang="en">hasAssociatedFlock</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Year">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#TimeUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#EventType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">It refer to different types of events related to livestock or farming. For example, "slaughter" could be one event type, and "birth," "vaccination," or "disease outbreak" could be other event types.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmID_2752546">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
+    <lho:CS63 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_38236"/>
+    <rdfs:comment xml:lang="en">This is a general Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">FarmID_2752546</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmID_1761167">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
+    <lho:CS63 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_39105"/>
+    <rdfs:comment xml:lang="en">This is a general Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">FarmID_1761167</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Nursery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PigProductionStages"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#SlughterEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#EventType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7f93fdf1db9f4e918b70430acc9ad40a">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS30"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://aims.fao.org/aos/agrovoc/c_27241">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <lho:hasExactSynonym>MB</lho:hasExactSynonym>
+    <rdfs:comment xml:lang="en">Mycoplasma bovis is a bacterial pathogen that primarily affects cattle, causing respiratory disease, arthritis, mastitis, and other systemic infections.</rdfs:comment>
+    <rdfs:isDefinedBy>https://agrovoc.fao.org/browse/agrovoc/en/page/c_27241</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">MycoplasmaBovis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#Veterinarian">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment>A Veterinarian is a qualified and licensed professional responsible for the health and welfare of animals. 
+    Veterinarians perform clinical examinations, diagnose diseases, prescribe treatments, and provide guidance on prevention, vaccination, and biosecurity in livestock and aquaculture settings.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_1977700_1">
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:label xml:lang="en">House_1977700_1</rdfs:label>
+    <lho:CS45 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS45>
+    <rdfs:comment xml:lang="en">House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). </rdfs:comment>
+    <lho:CS30 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_267678"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasBreed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
+    <rdfs:comment>Link a sample to specific  animal breed.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://aims.fao.org/aos/agrovoc/c_35380">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <lho:hasExactSynonym xml:lang="en">PRRS</lho:hasExactSynonym>
+    <rdfs:comment xml:lang="en">Porcine Reproductive and Respiratory Syndrome (PRRS) is a viral disease in pigs, causing reproductive failure in sows and respiratory symptoms in pigs of all ages.</rdfs:comment>
+    <rdfs:isDefinedBy>https://agrovoc.fao.org/browse/agrovoc/en/page/c_35380</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">PorcineReproductiveAndRespiratorySyndrome</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_261895">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>261895</lho:CS32>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">164846</lho:CS33>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-09-12</lho:CS34>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-11-05</lho:CS35>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALT</lho:CS36>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmID_1646742">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
+    <lho:CS63 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_38423"/>
+    <rdfs:comment xml:lang="en">This is a general Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">FarmID_1646742</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_274072">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>274072</lho:CS32>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">487236</lho:CS33>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-08</lho:CS34>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-05-20</lho:CS35>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</lho:CS36>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasAge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Age"/>
+    <rdfs:comment>link a sample to age Unit</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS55">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#ProductionCycleTime"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>Represents the time duration of a given production stage</rdfs:comment>
+    <rdfs:label xml:lang="en">hasCycleTime</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://aims.fao.org/aos/agrovoc/c_33359">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <lho:hasExactSynonym xml:lang="en">HS</lho:hasExactSynonym>
+    <rdfs:comment xml:lang="en">Haemophilus somnus classified as Histophilus somni, is a Gram-negative bacterium that can cause respiratory and systemic infections in cattle and other domestic and farm animals</rdfs:comment>
+    <rdfs:isDefinedBy xml:lang="en">https://agrovoc.fao.org/browse/agrovoc/en/page/c_33359</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">HistophilusSomnus</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_273330">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>273330</lho:CS32>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">164846</lho:CS33>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-03-31</lho:CS34>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-05-13</lho:CS35>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</lho:CS36>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5b8f52d39ab84391afc4dc1f5e053091">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PigProductionStages"/>
+    <rdf:rest rdf:nodeID="Nb1d4f8f3070a4ac691e01d3b2783b639"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_1729635_3">
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:label xml:lang="en">House_1729635_3</rdfs:label>
+    <lho:CS45 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</lho:CS45>
+    <rdfs:comment xml:lang="en">House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). </rdfs:comment>
+    <lho:CS30 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_273898"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS23">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS19"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS21"/>
+    <rdfs:comment>Links a region to pathogen prevalence.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasPrevalence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://aims.fao.org/aos/agrovoc/c_16398">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <lho:hasExactSynonym xml:lang="en">BRSV</lho:hasExactSynonym>
+    <rdfs:comment xml:lang="en">Bovine Respiratory Syncytial Virus (BRSV) is a major cause of respiratory disease in cattle, characterized by coughing, nasal discharge, and increased respiratory rate.</rdfs:comment>
+    <rdfs:isDefinedBy xml:lang="en">https://agrovoc.fao.org/browse/agrovoc/en/page/c_16398</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">BovineRespiratorySyncytialVirus</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Day">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#TimeUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N12b5b09471b74190bd215510aaae73f0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasBreed"/>
+    <owl:allValuesFrom rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Beef"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#SampleNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">SampleNumber is a unique identifier assigned to a specimen collected from livestock or other sources for purposes such as diagnostics or research, facilitating individual sample tracking and data organization.</rdfs:comment>
+    <rdfs:label xml:lang="en">SampleNumber</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N19bb3da7d3dd412388b5ec2af599b065">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Finishing"/>
+    <rdf:rest rdf:nodeID="Ncd8f2b3768d041f7af79ddc72dd42eee"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS36">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">Records the growth pattern of the flock over time.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasGrowthCurve</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment>% of cases in a quarter.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasQuarterPathogenPrevalence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#version">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N40cdcad20d164fdd8e00f9d6f9442307">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS63"/>
+    <rdf:rest rdf:nodeID="N004b13cd18a9479cb1a979a14c631455"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N45428507c84a48bb9cc423054800f6c1">
+    <rdf:first rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS05">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide#SampleResult"/>
+    <rdfs:label xml:lang="en">1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Month">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#TimeUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne9b763e70cb5466fa979f5b841a7c1cf">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Processing"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://aims.fao.org/aos/agrovoc/c_34495">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <lho:hasExactSynonym>PH</lho:hasExactSynonym>
+    <rdfs:comment xml:lang="en">Pasteurella haemolytica is a Gram-negative bacterium associated with respiratory infections, particularly in cattle, causing bovine respiratory disease complex (BRDC) or shipping fever.</rdfs:comment>
+    <rdfs:isDefinedBy>https://agrovoc.fao.org/browse/agrovoc/en/page/c_34495</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">PasteurellaHaemolytica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">Cattle, pig, and poultry represent distinct species within the animal kingdom commonly raised for agricultural purposes, including meat production.</rdfs:comment>
+    <owl:equivalentClass xml:lang="en">http://www.purl.org/decide#SpeciesGroup</owl:equivalentClass>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_2214740_3">
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:label xml:lang="en">House_2214740_3</rdfs:label>
+    <lho:CS45 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</lho:CS45>
+    <rdfs:comment xml:lang="en">House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). </rdfs:comment>
+    <lho:CS30 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_274453"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#Unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <lho:imported_from xml:lang="en">http://www.purl.org/decide#Unit</lho:imported_from>
+    <rdfs:comment xml:lang="en">The class representing a unit of measurement or denomination. Instances of this class may include various units such as length units, weight units, time units, etc. It serves as a general category for expressing quantitative values in a standardized manner across different domains.</rdfs:comment>
+    <rdfs:label>Unit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmID_6369989">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
+    <lho:CS63 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_38543"/>
+    <rdfs:comment xml:lang="en">This is a general Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">FarmID_6369989</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breeder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PoultryProductionStages"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndfd5dd0409ac4893adf8addbf30ccc6e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="Ne3c91b112c1f4c6eb21daea9dba7224a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Growing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CattleProductionStages"/>
+    <rdfs:subClassOf rdf:nodeID="N58de3015b11e4ee1a3637e57843d0357"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasSampleType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide#SampleType"/>
+    <rdfs:comment>Associates a Sample with a SampleType indicating the kind of material collected, such as blood, tissue, feces, or water.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:label xml:lang="en">Region</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">Represents a group of poultry birds in a specific house at a farm, forming a distinct management unit.</rdfs:comment>
+    <rdfs:label xml:lang="en">Flock</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1c3ea835039b4f4aaf9f188275a877a2">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Hatching"/>
+    <rdf:rest rdf:nodeID="Nb9395e5765364a67aa4967efd86a8faa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#MeasurementType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS34">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>data type for hatching</rdfs:comment>
+    <rdfs:label xml:lang="en">hasHatchDate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N883e3267635c4be3b995def144b787b7">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breeding"/>
+    <rdf:rest rdf:nodeID="N19bb3da7d3dd412388b5ec2af599b065"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#SampleType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">SampleType</rdfs:comment>
+    <rdfs:comment xml:lang="en">SampleType describes the kind of material or source from which a sample is collected for analysis. 
+Examples include blood, tissue, feces, milk, water, feed, or environmental swabs. 
+It is used to classify samples according to their origin and is essential for interpreting diagnostic and surveillance data.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS27">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS26"/>
+    <rdfs:comment>Bovine respiratory disease +ev cases in animal sample  at particualr time and region</rdfs:comment>
+    <rdfs:label xml:lang="en">BRDCaseOutbreak</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS03">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://aims.fao.org/aos/agrovoc/c_35380"/>
+    <rdfs:label xml:lang="en">PRRS</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Layer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PoultryProductionStages"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5989671e29dc4917bd33698b17dcf755">
+    <rdf:first rdf:resource="http://www.purl.org/decide#Farm"/>
+    <rdf:rest rdf:nodeID="N45428507c84a48bb9cc423054800f6c1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasPathogen">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <rdfs:comment>link sample to specific pathogen</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasProvince">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
+    <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Province"/>
+    <rdfs:comment>link sample to region</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Fluid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#SampleType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS12">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25464"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment xml:lang="en">percentage % of cases in a country.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasCountryPathogenPrevalence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Hatching">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PoultryProductionStages"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb9395e5765364a67aa4967efd86a8faa">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Layer"/>
+    <rdf:rest rdf:nodeID="Ne9b763e70cb5466fa979f5b841a7c1cf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_39105">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS62"/>
+    <rdfs:comment xml:lang="en">This is a Poultry Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">PF_ID_39105</rdfs:label>
+    <lho:CS29 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_1761167_5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#BAL">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#SampleType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#DiseaseOutbreakEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#EventType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Unique ID for each sample.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasSampleNumber</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#H1N1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://aims.fao.org/aos/agrovoc/c_6214dcad"/>
+    <rdfs:comment xml:lang="en">H1N1 is a subtype of the influenza a virus, and it has been responsible for influenza outbreaks in both humans and pigs. In the context of livestock health ontology or any ontology dealing with diseases, H1N1 would be classified as a pathogen.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5e4c232b8b71460db8d9e4854ed7dcf0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasBreed"/>
+    <owl:allValuesFrom rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Dairy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#BreedingFarm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmType"/>
+    <rdfs:comment xml:lang="en">A Breedingfarm" may focus on breeding and raising animals for specific traits.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#TimeUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Unit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbad5f7806b814e869b1107a1a7d925a2">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Broiler"/>
+    <rdf:rest rdf:nodeID="N1c3ea835039b4f4aaf9f188275a877a2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS07">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#DiagnosticTest"/>
+    <rdfs:comment>an individual (entity) that represent PCR</rdfs:comment>
+    <rdfs:label xml:lang="en">PCR</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasAgeUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Salmon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
+    <rdfs:label>Salmon</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#Measurement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:versionIRI rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO/1.3"/>
+    <owl:imports rdf:resource="http://www.purl.org/decide"/>
+    <lho:creator xml:lang="en">Saba Noor for more information please contact at this email: saba.noor@ugent.be / sabanoor8867@gmail.com / sabanoor8867@gmail.com</lho:creator>
+    <lho:hasExactSynonym xml:lang="en">LHO</lho:hasExactSynonym>
+    <rdfs:comment xml:lang="en">LHO, guided by OBO Foundry principles, integrates domain knowledge and data for livestock health. The ontology covers farms, samples, geolocation, breed, diagnostic tests, and pathogen identification, including bacteria like Histophilus somni, Mannheimia haemolytica, Pasteurella multocida, Bovine coronavirus, bacterial mycoplasma, and aerobic culture results in cattle. For pigs, it includes FarmType, age, weight, and pathogens like PRRS, SI and M_Hyponemoniea. In poultry, LHO incorporates FarmType, with specific pathogen names such as Infectious Bronchitis (IB), providing a concise overview of health aspects across livestock species.</rdfs:comment>
+    <rdfs:comment xml:lang="en">https://www.purl.org/decide/LiveStockHealthOnto/LHO</rdfs:comment>
+    <rdfs:seeAlso xml:lang="en">https://bioportal.bioontology.org/ontologies/LHO</rdfs:seeAlso>
+    <owl:priorVersion xml:lang="en">V1.1</owl:priorVersion>
+    <owl:versionInfo xml:lang="en">V1.3</owl:versionInfo>
+    <skos:PrefLable xml:lang="en">LiveStock HealthOntology</skos:PrefLable>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Feces">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#SampleType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Province"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment>data type vlaue Represents the prevalence rate of a pathogen in a province.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasProvincePathogenPrevalence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">Farm identification involves assigning a unique code or name to a specific agricultural property, facilitating tracking and management for regulatory, organizational, or administrative purposes.</rdfs:comment>
+    <rdfs:label xml:lang="en">FarmIdentification</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na284d72fc51b4bdc888c8b04ec1f9020">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasPathogen"/>
+    <owl:someValuesFrom rdf:resource="http://aims.fao.org/aos/agrovoc/c_6214dcad"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Egglaying">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FlockID_273898">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS28"/>
+    <lho:CS32>273898</lho:CS32>
+    <lho:CS33>164846</lho:CS33>
+    <lho:CS33 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">164846</lho:CS33>
+    <lho:CS34>2020-04-06</lho:CS34>
+    <lho:CS34 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-06</lho:CS34>
+    <lho:CS35>2020-05-20</lho:CS35>
+    <lho:CS35 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-05-20</lho:CS35>
+    <lho:CS36>REG</lho:CS36>
+    <lho:CS36 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</lho:CS36>
+    <lho:CS37>1</lho:CS37>
+    <lho:CS37 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</lho:CS37>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">FarmType categorizes the nature or focus of a farm, specifying whether it is oriented towards crop cultivation, livestock raising, or a combination of both, providing a classification for agricultural purposes.</rdfs:comment>
+    <rdfs:label xml:lang="en">FarmType</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opendata.inra.fr/AnimalDiseasesOnto/AG78">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
+    <rdfs:comment xml:lang="en">Pasteurella multocida is a bacterial pathogen in cattle associated with respiratory infections, causing pneumonia and other respiratory symptoms.</rdfs:comment>
+    <rdfs:label xml:lang="en">PasteurellaMultocida</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nff7b31336b7f447a90010a0b0f5e45df">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Weaning"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ncbi.nlm.nih.gov/taxonomy/9913">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
+    <rdfs:label xml:lang="en">Cattle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N98e291dfa2854a71a72fdf4c9785b6ea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasPathogen"/>
+    <owl:someValuesFrom rdf:resource="http://opendata.inra.fr/AnimalDiseasesOnto/AG34"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FeedLot">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmType"/>
+    <rdfs:comment xml:lang="en">A Feedlot typically emphasizes the finishing stage of livestock for meat production,</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne5e127bde7a44d3fb71dcb564c427e79">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="N9dd717ac81bf4863986c61d036522ca9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS21">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">Represents the prevalence rate of a pathogen in a region/time.</rdfs:comment>
+    <rdfs:label xml:lang="en">PrevalenceObservation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5a83d38ed6a044759d7c4ec3a51adcff">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Suckling"/>
+    <rdf:rest rdf:nodeID="Nff7b31336b7f447a90010a0b0f5e45df"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne3c91b112c1f4c6eb21daea9dba7224a">
+    <rdf:first rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CattleProductionStages"/>
+    <rdf:rest rdf:nodeID="N5b8f52d39ab84391afc4dc1f5e053091"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#BirthEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#EventType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Farm_38236">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS62"/>
+    <rdfs:comment xml:lang="en">This is a Poultry Farm ID</rdfs:comment>
+    <rdfs:label xml:lang="en">PF_ID_38236</rdfs:label>
+    <lho:CS29 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#House_2752546_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N08947736bda349448c4a3548ee9616c2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasPathogen"/>
+    <owl:someValuesFrom rdf:resource="http://aims.fao.org/aos/agrovoc/c_27241"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.purl.org/decide#hasSample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:domain rdf:resource="https://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N31a48a7f42994be286845e65eb9a4a6a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasPathogen"/>
+    <owl:someValuesFrom rdf:resource="http://opendata.inra.fr/AnimalDiseasesOnto/AG744"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasAgeValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PoultryProductionStages">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockProductionSatges"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Age">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#MeasurementType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfd42c5885fd546ae880768f02ce610b0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasPathogen"/>
+    <owl:someValuesFrom rdf:resource="http://aims.fao.org/aos/agrovoc/c_27245"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://aims.fao.org/aos/agrovoc/c_7555">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
+    <rdfs:label xml:lang="en">Pig</rdfs:label>
+    <skos:PrefLable xml:lang="en">pig</skos:PrefLable>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#H1N2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://aims.fao.org/aos/agrovoc/c_6214dcad"/>
+    <rdfs:comment>H1N2 is a swine influenza subtype, resulting from the reassortment of genetic material from human, swine, and avian influenza viruses.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide#Pathogen">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">A pathogen is a microorganism, such as a bacterium or virus, that causes disease in its host, be it plants, animals, or humans.</rdfs:comment>
+    <rdfs:label xml:lang="en">Pathogen</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#DiagnosticTest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">Diagnostic tests, such as PCR and culture, are utilized in pigs, poultry, and cattle to identify and analyze pathogens, aiding in disease detection and management.</rdfs:comment>
+    <rdfs:label xml:lang="en">DiagnosticTest</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#PrefLable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Weight">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#MeasurementType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockProductionSatges">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LiveStockHealthOntology"/>
+    <rdfs:comment xml:lang="en">A class representing different breeds of animals, such as cattle, poultry, and pigs. Breeds are used to categorize and classify animals based on specific characteristics, traits, and purposes. 
+For example, in the context of cattle, breeds can be categorized as meat, beef, or mixed breeds, each breed for specific agricultural or culinary purposes. Similarly, in the context of poultry, breeds can be categorized as meat breeds or egg-laying breeds. Pigs are also breed for meat production. The 'Breed' class serves as a foundational concept for classifying and organizing various animal breeds within the ontology.</rdfs:comment>
+    <rdfs:label xml:lang="en">Breed</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N101d9c33b3aa42f49d714539d90b419f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="N883e3267635c4be3b995def144b787b7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <skos:PrefLable></skos:PrefLable>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS45">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS00"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">houseNumber</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasExactSynonym">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#imported_from">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasWeightValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>
